@@ -1,0 +1,149 @@
+Grapheme	target	simple_target	segment_type	notes
+a	a	a	v	
+ã	ã	ã	v	
+b	b	b	c	
+bh	bʱ	bʰ	c	
+c	ts	ts	c	
+cc	tsː	tsː	c	
+ch	tsʰ	tsʰ	c	
+cch	tsʰː	tsʰː	c	
+d	ɖ	d	c	
+dh	ɖʱ	dʰ	c	
+e	e̞	ẽ	v	
+ẽ	ẽ	ẽ	v	
+f	pʰ	pʰ	c	only occurs as typo of ⟨ph⟩
+g	ɡ	ɡ	c	
+gh	ɡʱ	ɡʰ	c	
+h	ɦ	h	c	
+i	i	i	v	
+ĩ	ĩ	ĩ	v	
+ɨ	ɨ	ɨ	v	
+j	dz	dz	c	
+jh	dzʱ	dzʱ	c	
+kkh	kʰː	kʰː	c	
+k	k	k	c	
+kk	kː	kː	c	
+kh	kʰ	kʰ	c	
+l	l	l	c	
+ll	lː	lː	c	
+lh	lʱ	lʰ	c	
+m	m	m	c	
+mm	mː	mː	c	
+n	n	n	c	
+nn	nː	nː	c	
+o	o̞	o	v	
+õ	õ	õ	v	
+pph	pʰː	pʰː	c	
+p	p	p	c	
+pp	pː	pː	c	
+ph	pʰ	pʰ	c	
+r	r	r	c	
+s	s	s	c	
+ss	sː	sː	c	
+t	ʈ	t	c	
+tth	ʈʰː	ʈʰː	c	updated from tʰː
+tt	ʈː	tː	c	
+th	ʈʰ	tʰ	c	
+u	u	u	v	
+ũ	ũ	ũ	v	
+w	ʋ	w	c	
+y	j	j	c	
+̃	NULL	NULL	NULL	error in the data?
+ʔ	ʔ	ʔ	c	
+ŋ	ŋ	ŋ	c	
+-	NULL	NULL		
+.	NULL	NULL		
+ā	a	a	v	
+/	NULL	NULL		
+ɨ̃	ɨ̃	ɨ̃	v	
+N	n	n	c	
+K	k	k	c	
+v	v	v	c
+S	s	s	c	
+~	NULL	NULL		
+P	p	p	c
+D	d	d	c
+ì	i	i	v	
+"	NULL	NULL		
+R	r	r	c	
+B	b	b	c
+I	i	i	c
+?	NULL	NULL		
+ē	e	e	v	
+à	a	a	v	
+ū	u	u	v	
+̃	NULL	NULL		
+ɨ̄	ɨ	ɨ	v	
+,	NULL	NULL		
+C	ts	ts	c	
+A	a	a	v	
+ī	i	i	v	
+J	dz	dz	c	
+M	m	m	c	
+(	NULL	NULL		
+̄	NULL	NULL		
+T	t	t	c	
+ã̃	ã	ã	v	
+L	l	l	c	
+è	e	e	v	
+O	o	o	v	
+m̄	m	m	c	
+)	NULL	NULL		
+Y	j	j	c	
+ã̄	ã	ã	v
+ʔ̃	ʔ	ʔ	c	
+ō	o	o	v	
+q	q	q	c	
+�	NULL	NULL		
+h̃	ɦ	h	c	
+G	ɡ	ɡ	c	
+H	h	h	c	
+x	x	x	c	
+z	z	z	c	
+˜	NULL	NULL		
+ĩ̃	ĩ	ĩ	v	
+ã̀	ã	ã	v	
+ù	u	u	v	
+ǃ	NULL	NULL		
+ĩ̄	ĩ	ĩ	v	
+ũ̃	ũ	ũ	v	
+ɡ	ɡ	ɡ	c	
+̈	NULL	NULL		
+̟	NULL	NULL		
+\	NULL	NULL		
+m̃	m	m	c	
+V	v	v	c	
+ɨ̃̃	ɨ̃	ɨ̃	v	
+h̄	h	h	c	
+ḍ	d	d	c	
+ɨ̀	ɨ	ɨ	v	
+!	NULL	NULL		
+ʔ̄	ʔ	ʔ	c	
+3	NULL	NULL		
+ŋ̃	ŋ	ŋ	c	
+`	NULL	NULL		
+।	NULL	NULL		
+ʌ	NULL	NULL		
+0	NULL	NULL		
+à̀	a	a	v	
+ã̴	a	a	v	
+ã̴̴̴	a	a	v
+õ̃	õ	õ	v	
+ȭ	õ	õ	v	
+	NULL	NULL		
+ŋ̈	ŋ	ŋ	c	
+u̪	u	u	v	
+ɨ̵	ɨ	ɨ	v	
+ë	e	e	v	
+ŋ̄	ŋ	ŋ	c	
+'	NULL	NULL		
+¨	NULL	NULL		
+ɲ	ɲ	ɲ	c	
+ñ	n	n	c	
+ũ̄	ũ	ũ	v	
+ɑ	a	a	v	
+̀	NULL	NULL		
+̌	NULL	NULL		
+ु	NULL	NULL		
+े	NULL	NULL		
+�̃	NULL	NULL		

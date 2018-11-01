@@ -1,0 +1,66 @@
+Grapheme	target	simple_target	segment_type	notes
+a	ʌ	ʌ	v	
+â	aː	aː	v	
+b	b	b	c	only in loans (644 utterances), poss. no contrast to /p/
+ch	t̠ʃ	t̠ʃ	c	often voiced to [dʒ]
+d	d	d	c	only in loans (650 utterances), poss. no contrast to /t/
+e	eː	eː	v	
+f	f	f	c	only in loans (119 utterances)
+g	ɡ	ɡ	c	only in loans (342 utterances), poss. no contrast to /k/
+h	h	h	c	
+i	ɪ	ɪ	v	
+î	iː	iː	v	
+j	d̠ʒ	d̠ʒ	c	only in loans (71 utterances), poss. no contrast to /tʃ/
+k	k	k	c	often voiced to [ɡ]
+kw	kʷ	kʷ	c	
+l	l	l	c	
+m	m	m	c	
+n	n	n	c	
+o	ʊ	ʊ	v	
+p	p	p	c	often voiced to [b]
+s	s	s	c	
+sh	ʃ	ʃ	c	
+t	t	t	c	often voiced to [d]
+th	θ	θ	c	only in loans (210 utterances) / ð 
+u	ʊ	ʊ	v	just a wild guess based on the %pho: tier
+û	o	o	v	just a wild guess based on the %pho: tier
+w	w	w	c	segment type may be disputable, see note on diphthongs below
+y	j	j	c	segment type may be disputable, see note on diphthongs below
+r	r	r	c	
+-	NULL	NULL	NULL	
+z	z	z	c	
+v	v	v	c	
+'	NULL	NULL	NULL	
+Ø	NULL	NULL	NULL	
+̂	NULL	NULL	NULL	
+CH	t̠ʃ	t̠ʃ	c	often voiced to [dʒ]
+M	m	m	c	
+N	n	n	c	
+P	p	p	c	
+A	aː	aː	v	
+W	w	w	c	
+K	k	k	c	
+T	t	t	c	
+B	b	b	c	
+S	s	s	c	
+I	ɪ	ɪ	v	
+U	ʊ	ʊ	v	
+D	d	d	c	
+J	d̠ʒ	d̠ʒ	c	
+L	l	l	c	
+O	ʊ	ʊ	v	
+Y	j	j	c	
+E	eː	eː	v	
+R	r	r	c	
+G	ɡ	ɡ	c	
+x	x	x	c	
+ɡ	ɡ	ɡ	c	
+F	f	f	c	
+Q	q	q	c	
+?	NULL	NULL	NULL	
+V	v	v	c	
+X	x	x	c	
+â̂	aː	aː	v	
+Z	z	z	c	
+m̂	m	m	c	
+

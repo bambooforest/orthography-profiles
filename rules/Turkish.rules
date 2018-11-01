@@ -1,0 +1,6 @@
+# Turkish rules
+
+ğ(?=#|[bcçdfghklmnprsştvz])	ː	ː		
+(?<=[eiöü])ğ(?=[eiöü])	j	j	c	
+ğ				in the remaining environments this grapheme does not have any phonological equivalent at all
+.

@@ -1,0 +1,7 @@
+# Russian rules
+(?<=#)e	je	je	cv	
+(?<=ch|#j)e	e	e	v	
+(?<=sh|zh|c|ch)e	ɛ	ɛ	v	assuming separate phoneme parallel to i : ɨ
+(?<=#|ch)i	i	i	v	
+(?<=sh|zh|c)i	ɨ	ɨ	v	
+(?<=[bdfgklmnprstvwxz])j	ʲ	ʲ		

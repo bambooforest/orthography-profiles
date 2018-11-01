@@ -1,0 +1,72 @@
+Grapheme	target	simple_target	segment_type	notes
+a	a	a	v	
+b	b	b	c	
+c	t̠ʃ	t̠ʃ	c	
+d	d	d	c	
+e	e	e	v	
+é	e	e	v	we don't really know what this grapheme does – it's too rare to represent /ɛ/ or /ə/, we'd have to ask Gaby
+è	e	e	v	we don't really know what this grapheme does – it's too rare to represent /ɛ/ or /ə/, we'd have to ask Gaby
+f	f	f	c	only in loans (esp. from Arabic; 4453 utterances)
+g	ɡ	ɡ	c	
+gh	ɣ	ɣ	c	only in Arabic loans (rare: 329 utterances)
+h	h	h	c	prob. rather [ɦ], needs confirmation
+i	i	i	v	
+j	d̠ʒ	d̠ʒ	c	
+k	k	k	c	
+kh	x	x	c	only in loans (rare: 408 utterances)
+l	l	l	c	
+m	m	m	c	
+n	n	n	c	
+nc	ɲ	ɲ	c	n(?=[cj])
+nj	ɲ	ɲ	c	n(?=[cj])
+ng	ŋ	ŋ	c	
+ny	ɲ	ɲ	c	
+o	o	o	v	
+ò	o	o	v	we don't really know what this grapheme does – it's too rare to represent /ɔ/, we'd have to ask Gaby
+ó	o	o	v	we don't really know what this grapheme does – it's too rare to represent /ɔ/, we'd have to ask Gaby
+p	p	p	c	
+q	q	q	c	only in Arabic loans (rare: 339 utterances)
+r	r	r	c	
+s	s	s	c	
+sy	ʃ	ʃ	c	only in loans (1060 utterances)
+t	t	t	c	
+u	u	u	v	
+v	v	v	c	only in loans (2136 tokens)
+w	w	w	c	verification needed, might really be [ʋ]
+y	j	j	c	
+z	z	z	c	only in loans (esp. from Arabic; 5409 utterances)
+-	NULL	NULL	NULL	
+?	NULL	NULL	NULL	
+P	p	p	c	
+M	m	m	c	
+S	s	s	c	
+B	b	b	c	
+A	a	a	v	
+K	k	k	c	
+T	t	t	c	
+D	d	d	c	
+R	r	r	c	
+I	i	i	v	
+C	t̠ʃ	t̠ʃ	c	
+N	n	n	c	
+G	ɡ	ɡ	c	
+J	d̠ʒ	d̠ʒ	c	
+L	l	l	c	
+H	h	h	c	
+F	f	f	c	
+E	e	e	v	
+O	o	o	v	
+Y	j	j	c	
+W	w	w	c	
+U	u	u	v	
+V	v	v	c	
+x	x	x	c	
+Z	z	z	c	
+X	x	x	c
+Q	q	q	c	
+(	NULL	NULL	NULL	
+)	NULL	NULL	NULL	
+"	NULL	NULL	NULL	
+[	NULL	NULL	NULL	
+]	NULL	NULL	NULL	
+0	NULL	NULL	NULL	
