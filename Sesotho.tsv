@@ -38,7 +38,7 @@ u	u	u	v
 w	w	w	c	
 y	j	j	c	
 M	m	m	c	
-'	NULL	NULL	NULL	
+\'	NULL	NULL	NULL	
 N	n	n	c	
 T	t	t	c	
 S	s	s	c	
@@ -61,11 +61,10 @@ F	f	f	c
 E	e	e	c	
 Q	kǃʼ	kǃʼ	c	
 _	NULL	NULL	NULL	
-"	NULL	NULL	NULL	
+\"	NULL	NULL	NULL	
 G	χ	χ	c	
 Y	χ	χ	c	
 A	a	a	v	
 O	o	o	v	
 U	u	u	v	
 W	w	w	c	
-
