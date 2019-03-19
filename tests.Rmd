@@ -1,5 +1,5 @@
 ---
-title: "ACQDIV-PHON data tests"
+title: "ACQDIV-PHON data tests for segments"
 author: "Steven Moran \\<steven.moran@uzh.ch\\>"
 output: github_document
 ---
@@ -12,75 +12,82 @@ library(testthat)
 
 ```{r}
 load('data/db/production.Rdata')
-df <- df %>% mutate(segments = strsplit(as.character(segments), "\\s")) %>% unnest(segments)
-head(df)
-counts <- df %>% group_by(language, segments) %>% select(language, segments) %>% summarize(count=n())
-# counts <- ungroup(counts)
-head(counts)
+df.long <- df %>% mutate(segments = strsplit(as.character(segments), "\\s")) %>% unnest(segments)
+counts <- df.long %>% group_by(language, segments) %>% select(language, segments) %>% summarize(count=n())
 ```
 
-# Chintang
-```{r}
 # Load orthography profiles and check that their contents are in 
 ## Chintang
+```{r}
 op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Chintang.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
-x <- counts %>% filter(language=="Chintang") %>% select(segments)
+x <- counts %>% filter(language=="Chintang") %>% select(language, segments)
 expect_true(all(x$segments %in% op$simple_target))
 ```
 
-# Indonesian
+## Indonesian
 ```{r}
 op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Indonesian.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
-x <- counts %>% filter(language=="Indonesian") %>% select(segments)
+x <- counts %>% filter(language=="Indonesian") %>% select(language, segments)
 expect_true(all(x$segments %in% op$simple_target))
 ```
 
-# Inuktitut
+## Inuktitut
 ```{r}
 op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Inuktitut.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
-x <- counts %>% filter(language=="Inuktitut") %>% select(segments)
+x <- counts %>% filter(language=="Inuktitut") %>% select(language, segments)
 expect_true(all(x$segments %in% op$simple_target))
 ```
 
-# Japanese
+## Japanese
 ```{r}
 op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Japanese.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
-x <- counts %>% filter(language=="Japanese") %>% select(segments)
+x <- counts %>% filter(language=="Japanese") %>% select(language, segments)
 # expect_true(all(x$segments %in% op$simple_target))
 x[which(!(x$segments %in% op$simple_target)),]
-counts %>% filter(language=="Japanese") %>% filter(segments=="ç")
-counts %>% filter(language=="Japanese") %>% filter(segments=="�")
+
+# Lots of loanwords with <c> not translated by the OP
+df %>% filter(language=="Japanese") %>% filter(grepl("� ", segments)) %>% select(word_id, word, segments)
+
+# Nasty hack because copy and paste in RStudio
+c <- x[which(!(x$segments %in% op$simple_target)),]
+c <- c$segments[1]
+# The c-cedilla does occur in the OP -- that it fails here is a pre-/de-compose issue
+df %>% filter(language=="Japanese") %>% filter(grepl(c, segments)) %>% select(word_id, word, segments)
 ```
 
-# Russian
+## Russian
 ```{r}
 op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Russian.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
-x <- counts %>% filter(language=="Russian") %>% select(segments)
+x <- counts %>% filter(language=="Russian") %>% select(language, segments)
 expect_true(all(x$segments %in% op$simple_target))
 ```
 
-# Sesotho
+## Sesotho
 ```{r}
 op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Sesotho.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
-x <- counts %>% filter(language=="Sesotho") %>% select(segments)
+x <- counts %>% filter(language=="Sesotho") %>% select(language, segments)
 # expect_true(all(x$segments %in% op$simple_target))
+
+# This is also an issue of <c> and in loanwords.
 x[which(!(x$segments %in% op$simple_target)),]
-counts %>% filter(language=="Sesotho") %>% filter(segments=="�")
+df %>% filter(language=="Sesotho") %>% filter(grepl("� ", segments)) %>% select(word_id, word, segments)
 ```
 
-# Turkish
+## Turkish
 ```{r}
 op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Turkish.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
-x <- counts %>% filter(language=="Turkish") %>% select(segments)
+x <- counts %>% filter(language=="Turkish") %>% select(language, segments)
 expect_true(all(x$segments %in% op$simple_target))
 ```
 
-# Yucatec
+## Yucatec
 ```{r}
 op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Yucatec.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
-x <- counts %>% filter(language=="Yucatec") %>% select(segments)
+x <- counts %>% filter(language=="Yucatec") %>% select(language, segments)
 # expect_true(all(x$segments %in% op$simple_target))
+
+# This is an issue of <H> and <h> 
 x[which(!(x$segments %in% op$simple_target)),]
-counts %>% filter(language=="Yucatec") %>% filter(segments=="�")
+df %>% filter(language=="Yucatec") %>% filter(grepl("� ", segments)) %>% select(word_id, word, segments)
 ```
 
