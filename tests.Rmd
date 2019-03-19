@@ -1,0 +1,86 @@
+---
+title: "ACQDIV-PHON data tests"
+author: "Steven Moran \\<steven.moran@uzh.ch\\>"
+output: github_document
+---
+  
+```{r, message=F, warning=F}
+library(dplyr)
+library(tidyr)
+library(testthat)
+```
+
+```{r}
+load('data/db/production.Rdata')
+df <- df %>% mutate(segments = strsplit(as.character(segments), "\\s")) %>% unnest(segments)
+head(df)
+counts <- df %>% group_by(language, segments) %>% select(language, segments) %>% summarize(count=n())
+# counts <- ungroup(counts)
+head(counts)
+```
+
+# Chintang
+```{r}
+# Load orthography profiles and check that their contents are in 
+## Chintang
+op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Chintang.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
+x <- counts %>% filter(language=="Chintang") %>% select(segments)
+expect_true(all(x$segments %in% op$simple_target))
+```
+
+# Indonesian
+```{r}
+op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Indonesian.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
+x <- counts %>% filter(language=="Indonesian") %>% select(segments)
+expect_true(all(x$segments %in% op$simple_target))
+```
+
+# Inuktitut
+```{r}
+op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Inuktitut.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
+x <- counts %>% filter(language=="Inuktitut") %>% select(segments)
+expect_true(all(x$segments %in% op$simple_target))
+```
+
+# Japanese
+```{r}
+op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Japanese.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
+x <- counts %>% filter(language=="Japanese") %>% select(segments)
+# expect_true(all(x$segments %in% op$simple_target))
+x[which(!(x$segments %in% op$simple_target)),]
+counts %>% filter(language=="Japanese") %>% filter(segments=="ç")
+counts %>% filter(language=="Japanese") %>% filter(segments=="�")
+```
+
+# Russian
+```{r}
+op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Russian.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
+x <- counts %>% filter(language=="Russian") %>% select(segments)
+expect_true(all(x$segments %in% op$simple_target))
+```
+
+# Sesotho
+```{r}
+op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Sesotho.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
+x <- counts %>% filter(language=="Sesotho") %>% select(segments)
+# expect_true(all(x$segments %in% op$simple_target))
+x[which(!(x$segments %in% op$simple_target)),]
+counts %>% filter(language=="Sesotho") %>% filter(segments=="�")
+```
+
+# Turkish
+```{r}
+op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Turkish.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
+x <- counts %>% filter(language=="Turkish") %>% select(segments)
+expect_true(all(x$segments %in% op$simple_target))
+```
+
+# Yucatec
+```{r}
+op <- read.delim('https://raw.githubusercontent.com/bambooforest/orthography-profiles/master/Yucatec.tsv', header=T, stringsAsFactors = F, quote = '"', sep="\t", comment.char = "\\", na.strings = "NULL")
+x <- counts %>% filter(language=="Yucatec") %>% select(segments)
+# expect_true(all(x$segments %in% op$simple_target))
+x[which(!(x$segments %in% op$simple_target)),]
+counts %>% filter(language=="Yucatec") %>% filter(segments=="�")
+```
+
